@@ -29,7 +29,7 @@ st.markdown(
     "Upload an image and click the button to generate a caption.",
     unsafe_allow_html=True
 )
-file = st.file_uploader("Upload File", accept_multiple_files=False)
+file = st.file_uploader("Upload File", accept_multiple_files=False, type=["jpg", "jpeg", "png"], label_visibility="collapsed")
 generate_button = st.button("Generate Caption", use_container_width=True)
 
 if file:
