@@ -1,0 +1,5 @@
+tensorflow==2.18.0
+tf_keras==2.18.0
+tensorflow_hub==0.16.1
+transformers==4.51.3
+streamlit==1.45.0
