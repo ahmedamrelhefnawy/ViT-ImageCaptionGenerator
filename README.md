@@ -42,7 +42,6 @@ This project implements an **Image Caption Generator** using a Vision Transforme
 ## Example
 
 1. Upload an image:
-   ![Upload Example](https://via.placeholder.com/400x200?text=Upload+Image)
 
 2. Generated caption:
    ```
