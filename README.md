@@ -10,18 +10,13 @@ This project implements an **Image Caption Generator** using a Vision Transforme
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/image-caption-generator.git
-   cd image-caption-generator
-   ```
 
-2. Install the required dependencies:
+1. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+2. Run the application:
    ```bash
    streamlit run app.py
    ```
@@ -39,15 +34,6 @@ This project implements an **Image Caption Generator** using a Vision Transforme
 - **`Services/`**: Includes modules for preprocessing, inference, and model loading.
 - **`README.md`**: Documentation for the project.
 
-## Example
-
-1. Upload an image:
-
-2. Generated caption:
-   ```
-   A group of people sitting at a table with food.
-   ```
-
 ## Requirements
 
 - Python 3.11+ (Recommended)
@@ -60,6 +46,23 @@ Install additional dependencies listed in `requirements.txt`.
 
 - Vision Transformer (ViT) architecture inspired by [Google Research](https://github.com/google-research/vision_transformer).
 - Streamlit for providing an easy-to-use interface.
+
+## Credits
+- [Ahmed Adel Mohammed](https://github.com/ahmeda335):
+  - [LinkedIn](www.linkedin.com/in/ahmed-adel-b748aa23b)
+  - [Contact](ahmedadel30320032003@gmail.com)
+- [Ahmed Eltokhy](https://github.com/ahmdeltoky03):
+  - [LinkedIn](https://www.linkedin.com/in/ahmd-eltokhey-8577b3275)
+  - [Contact](ahmdeltoky4@gmail.com)
+- [Amr Ghanem](https://github.com/AmrGhanem13):
+  - [LinkedIn](https://www.linkedin.com/in/amr-ghanem-306b392b9)
+  - [Contact](Amr_Ghanem07@yahoo.com)
+- [Samir Mohammed](https://github.com/samir-m0hamed):
+  - [LinkedIn](https://www.linkedin.com/in/samir-mohamed-2976bb252)
+  - [Contact](samirmohamed122003@gmail.com)
+- [Ahmed Elhefnawy](https://github.com/ahmedamrelhefnawy):
+  - [LinkedIn](https://www.linkedin.com/in/ahmed-elhefnawy-258949243/)
+  - [Contact](ahmedelhefnawy2003@hotmail.com)
 
 ## License
 
