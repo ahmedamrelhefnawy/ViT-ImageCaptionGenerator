@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 st.set_page_config(page_title="Image Caption Generator", page_icon="https://cdn-icons-png.flaticon.com/512/18561/18561814.png")
 
@@ -14,11 +15,13 @@ if 'generate_caption' not in st.session_state:
 
 if "caption_model" not in st.session_state or "tokenizer" not in st.session_state:
     with st.spinner("Loading Caption Generator..."):
-        from Services.loader import caption_model, tokenizer
-        st.session_state.caption_model = caption_model
+        from Services.loader import encoder, decoder, tokenizer
+        st.session_state.encoder = encoder
+        st.session_state.decoder = decoder
         st.session_state.tokenizer = tokenizer
 
-caption_model = st.session_state.caption_model
+st.session_state.encoder = encoder
+st.session_state.decoder = decoder
 tokenizer = st.session_state.tokenizer
 preprocess_image = st.session_state.preprocess_image
 generate_caption = st.session_state.generate_caption
@@ -50,7 +53,9 @@ if file:
             else:
                 with st.spinner("Generating Caption ..."):
                     preprocessed_image = preprocess_image(file)
-                    caption = generate_caption(caption_model, preprocessed_image, tokenizer)
+                    start = time.time()
+                    caption = generate_caption(encoder, decoder, preprocessed_image, tokenizer)
+                    end = time.time()
 
                 st.markdown(
                     f"""
@@ -61,6 +66,7 @@ if file:
                     """,
                     unsafe_allow_html=True
                 )
+                st.text(f"Time taken: {end - start:.2f} seconds")
 
 developers_info = {
     "Ahmed Adel Mohammed": {

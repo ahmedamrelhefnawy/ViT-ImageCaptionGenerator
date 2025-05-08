@@ -1,16 +1,18 @@
 import tensorflow as tf
 import numpy as np
 
-def generate_caption(model, image_input, tokenizer):
+def generate_caption(encoder, decoder, image_input, tokenizer):
     # 2 -> [START]
     batch_tokens = np.repeat(np.array([[2]]), 1, axis=0)
+    
+    image_features = encoder.predict(image_input) 
     
     for i in range(74):
         if np.all(batch_tokens[:, -1] == 3):  # If [END] token is reached, stop generating
             break
-            
         position_input = tf.repeat(tf.reshape(tf.range(i+1), [1, -1]), 1, axis=0)
-        probs = model((image_input, batch_tokens, position_input)).numpy()
+        # probs = model((image_input, batch_tokens, position_input)).numpy()
+        probs = decoder.predict([batch_tokens, position_input, image_features], verbose=0)
         batch_tokens = np.argmax(probs, axis=-1)
         
     predicted_text = []
