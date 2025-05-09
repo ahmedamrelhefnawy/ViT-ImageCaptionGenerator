@@ -47,7 +47,14 @@ Install additional dependencies listed in `requirements.txt`.
 - Vision Transformer (ViT) architecture inspired by [Google Research](https://github.com/google-research/vision_transformer).
 - Streamlit for providing an easy-to-use interface.
 
+## Notebooks:
+
+- [Visions Transformer Notebook](https://www.kaggle.com/code/ahmedadel300/vit-image-captioning)
+- [CNN Notebook](https://www.kaggle.com/code/ahmedadel300/image-caption)
+- [BLIB (Model From Huggingface)](https://www.kaggle.com/code/ahmedadel300/image-capination-blib)
+
 ## Credits
+
 - [Ahmed Adel Mohammed](https://github.com/ahmeda335):
   - [LinkedIn](www.linkedin.com/in/ahmed-adel-b748aa23b)
   - [Contact](ahmedadel30320032003@gmail.com)
